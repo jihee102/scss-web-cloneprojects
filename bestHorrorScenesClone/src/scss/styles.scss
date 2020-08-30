@@ -1,0 +1,177 @@
+@import "_variables";
+
+body{
+  background-color: $white;
+  margin: 0;
+}
+
+header{
+  background-color: $white;
+  height: 100%;
+  width: 33%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $red;
+  h1{
+    font-family: $font-heading;
+    font-size: 66px;
+    padding: 8% 10%;
+    width: 50%;
+    text-transform: uppercase;
+  }
+  .header_contents{
+    padding: 10% 10%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    font-family: $font;
+    h3, p{
+      width: 80%;
+    }
+    h3{
+      font-size: 25px;
+      font-weight: 500;
+      line-height: 1.1;
+    }
+    p{
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    nav{
+      padding-left: 0;
+      ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 0;
+        li{
+          font-weight: 600;
+          color: black;
+          opacity: 0.5;
+          list-style-type: none;
+          margin-right: 10px;
+          border-bottom: 2px solid rgba(0,0,0,0.5);
+          &:hover{
+            color: black;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  
+  }
+
+}
+
+main{
+  margin-left: 33%;
+  background-color: $white;
+  section{
+    background: linear-gradient(to bottom,
+     rgba(0,0,0,0.1) 1%,
+     rgba(0,0,0,0),
+     rgba(0,0,0,0),
+     rgba(0,0,0,0),
+     rgba(0,0,0,0)) 
+     $red;
+    display: flex;
+    height: 100vh;
+    padding:  0 11%;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: white;
+    font-family: $font;
+    font-weight: 600;
+    .movieHeading{
+      margin-top: 12%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      h2, p{
+        margin-bottom: 5px;
+      }
+      h2{
+        font-size: 25px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    
+      }
+    }
+    img{
+      width: 100%;
+      box-shadow:0 80px 80px -80px #000, 0 0 12px rgba(0,0,0,.06), inset 0 0 0 1px rgba(0,0,0,.2)
+    }
+    .agreeBox{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      font-size: 15px;
+      p{
+        margin-top: 0;
+      }
+      ul{
+        margin-top: 0;
+        padding-left: 8px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        li{
+          font-size: 18px;
+          opacity: 0.7;
+          list-style-type: none;
+          margin-right: 8px;
+          .thumbs{
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            
+            p{
+              margin: 0 2px;
+              font-size: 13px;
+            }
+          }
+          &:hover{
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and(max-width:1500px){
+  main{
+    section{
+    height: inherit;
+  }
+}
+}
+
+@media screen and(max-width:1200px){
+  header{
+    width: 50%;
+  }
+  main{
+    margin-left: 50%;
+    section{
+      height: inherit;
+    }
+  }
+  
+}
+
+@media screen and(max-width:800px){
+  header{
+    position: relative;
+    width: 100%;
+  }
+  main{
+    margin-left: 0;
+    width: 100%;
+    section{
+      height: inherit;
+    }
+  }
+}

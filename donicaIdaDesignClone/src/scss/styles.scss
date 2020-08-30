@@ -1,0 +1,88 @@
+@import "_elements";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 40px;
+  margin: 0;
+  font-family: "EB Garamond", serif;
+  background-color: #f0f0eb;
+}
+
+span {
+  color: $bg;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+header {
+  margin-bottom: 150px;
+  h1 {
+    letter-spacing: 2px;
+    font-size: 50px;
+    font-weight: 100;
+  }
+}
+
+main {
+  .itemHead {
+    @extend %grid;
+  }
+  .item {
+    @extend %grid;
+    border-top: solid 1px;
+    margin: 5px 0;
+    h2 {
+      font-size: 27px;
+      font-weight: 100;
+      margin: 10px 0 7px 0;
+    }
+    &:hover {
+      font-style: italic;
+    }
+  }
+  .description {
+    margin: 50px 0;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    p {
+      font-size: 35px;
+      font-weight: 100;
+      a {
+        color: $bg;
+        &:hover {
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    h1 {
+      font-size: 30px;
+    }
+  }
+  main {
+    .itemHead {
+      display: none;
+    }
+    .item {
+      grid-template-columns: 1fr;
+      .year,
+      .contents {
+        display: none;
+      }
+    }
+    .description {
+      p {
+        font-size: 25px;
+      }
+    }
+  }
+}

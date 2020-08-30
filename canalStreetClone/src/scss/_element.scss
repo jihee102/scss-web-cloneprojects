@@ -1,0 +1,18 @@
+%bigFont {
+  font-family: "Cormorant Garamond", serif;
+}
+
+%smallFont {
+  font-family: "Hind Madurai", sans-serif;
+  letter-spacing: 2px;
+}
+
+%aTag {
+  text-align: center;
+  text-decoration: none;
+  width: 10%;
+  padding: 20px 0;
+  color: black;
+  border: solid 1px black;
+  @extend %smallFont;
+}

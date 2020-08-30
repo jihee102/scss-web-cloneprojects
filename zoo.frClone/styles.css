@@ -1,0 +1,141 @@
+:root{
+    --dark-grey-color: #e6e6e6;
+    --padding-start: 15px;
+    --font-family:'Mulish', sans-serif;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font-family);
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 50px;
+    text-transform: lowercase;
+}
+
+header nav {
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-template-rows: 50px;
+    font-size: 25px;
+}
+
+header nav .headBox1{
+    grid-column: 1 / -2;
+    color: var(--dark-grey-color);
+    display: flex;
+    align-items: center;
+    padding: 0 var(--padding-start);
+}
+
+header nav .headBox2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .headBox1:hover{
+    background-color: var(--dark-grey-color);
+    color: white;
+}
+
+header nav .title {
+    color: black;
+    margin-right: calc(var(--padding-start)*2);
+}
+
+header nav .headBox2:hover {
+    background-color: var(--dark-grey-color);
+    color: black;
+}
+
+header nav .headBox1 ul, .headBox2 ul{
+    display: flex;
+    justify-content: start;
+    margin-left: var(--padding-start);
+}
+
+header nav .headBox1 ul li , .headBox2 ul li{
+    margin-right: calc(var(--padding-start));
+}
+
+header nav .headBox2 .language {
+    font-size: 12px;
+    margin-right: var(--padding-start);
+}
+
+/* main */
+
+main{
+    text-transform: uppercase;
+    text-overflow: hidden;
+}
+
+main .girdBox{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fill, 0.6fr);
+
+}
+
+main .girdBox .item{
+    display: flex;
+    flex-direction: column;
+
+}
+
+main .girdBox .item img{
+    width: 100%;
+}
+
+
+@media screen and (max-width: 880px){
+    main .girdBox , header nav{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto-fill, 0.6fr);
+    }
+    
+    header .headBox1 .categories{
+       display: none;
+    }
+
+    header .headBox2{
+        grid-column: 2/-1;
+    }
+    
+    header .headBox2 .proejctHeader{
+        display: none;
+    }
+
+    header .headBox2 ul{
+        margin: 0;
+    }
+
+}
+
+@media screen and (max-width : 500px) {
+    *{
+        font-size: 20px;
+    }
+    main .girdBox{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fill, 0.6fr);
+    }
+
+}
