@@ -3,11 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nomadcoders/scss-masterclass.git"
+    "type": "git"
   },
-  "author": "Nicolás Serrano Arévalo <itnico.las.me@gmail.com>",
-  "license": "MIT",
+  "author": "Jihee",
   "dependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
@@ -27,9 +25,5 @@
       "last 2 versions"
     ]
   },
-  "description": "(S)CSS Layout Masterclass: Flexbox & Grid",
-  "bugs": {
-    "url": "https://github.com/nomadcoders/scss-masterclass/issues"
-  },
-  "homepage": "https://github.com/nomadcoders/scss-masterclass#readme"
+  "homepage": "https://jihee102.github/scss-web-cloneprojects"
 }

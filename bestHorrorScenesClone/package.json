@@ -2,9 +2,10 @@
   "name": "scss-masterclass",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/nomadcoders/scss-masterclass",
-  "author": "Nicolás Serrano Arévalo <itnico.las.me@gmail.com>",
-  "license": "MIT",
+  "repository": {
+    "type": "git"
+  },
+  "author": "Jihee",
   "dependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
@@ -23,5 +24,6 @@
     "browsers": [
       "last 2 versions"
     ]
-  }
+  },
+  "homepage": "https://jihee102.github/scss-web-cloneprojects"
 }
